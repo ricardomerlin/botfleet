@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "BotFleet",
+  "version": "1.0.0",
+  "description": "Deploy a fleet of AI bots on any page. They read what you're browsing and recommend what to do next.",
+  "minimum_chrome_version": "116",
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": {
+    "default_title": "BotFleet: open the fleet",
+    "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png" }
+  },
+  "side_panel": { "default_path": "sidepanel.html" },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "permissions": ["sidePanel", "storage", "scripting", "tabs", "contextMenus", "favicon"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "commands": {
+    "deploy-all": {
+      "suggested_key": { "default": "Alt+Shift+D" },
+      "description": "Deploy all bots on the current page"
+    },
+    "open-panel": {
+      "suggested_key": { "default": "Alt+Shift+F" },
+      "description": "Open the BotFleet side panel"
+    }
+  }
+}

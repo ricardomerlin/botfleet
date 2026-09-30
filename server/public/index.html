@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="botfleet-token" content="__BOTFLEET_TOKEN__" />
+  <meta name="botfleet-origin" content="__BOTFLEET_ORIGIN__" />
+  <title>BotFleet</title>
+  <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="/app.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#/overview">
+        <img src="/logo.svg" alt="" width="30" height="30" />
+        <span>BotFleet</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#/overview" data-route="overview"><svg viewBox="0 0 24 24"><path d="M3 13h8V3H3zm0 8h8v-6H3zm10 0h8V11h-8zm0-18v6h8V3z"/></svg>Overview</a>
+        <a href="#/bots" data-route="bots"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v1h3a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3h3V4a2 2 0 0 1 2-2m-3 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/></svg>Bots</a>
+        <a href="#/activity" data-route="activity"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Activity</a>
+        <div class="nav-label">Setup</div>
+        <a href="#/credentials" data-route="credentials"><svg viewBox="0 0 24 24"><path d="M7 14a3 3 0 1 1 0-6 3 3 0 0 1 0 6m5.65-4A6 6 0 1 0 12.65 14H17v4h4v-4h2v-4z"/></svg>AI credentials</a>
+        <a href="#/privacy" data-route="privacy"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5z"/></svg>Privacy</a>
+        <a href="#/extension" data-route="extension"><svg viewBox="0 0 24 24"><path d="M20.5 11H19V7a2 2 0 0 0-2-2h-4V3.5a2.5 2.5 0 0 0-5 0V5H4a2 2 0 0 0-2 2v3.8h1.5a2.7 2.7 0 0 1 0 5.4H2V20a2 2 0 0 0 2 2h3.8v-1.5a2.7 2.7 0 0 1 5.4 0V22H17a2 2 0 0 0 2-2v-4h1.5a2.5 2.5 0 0 0 0-5"/></svg>Extension</a>
+      </nav>
+      <div class="sidebar-foot" id="status-foot"></div>
+    </aside>
+    <main class="main">
+      <div id="view"></div>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
